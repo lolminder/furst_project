@@ -13,14 +13,14 @@ class DatabaseController extends Controller
 
          Yii::$app->db->createCommand()->createTable('person',
             [
-            'id' => 'fk',
+            'person_id' => 'fk',
             'name' => 'string',
             'age' => 'int',
             'hobby' => 'string'
         ]);
         Yii::$app->db->createCommand()->createTable('car',
             [
-                'id' => 'fk',
+                'car_id' => 'fk',
                 'name' => 'string',
                 'age' => 'int',
                 'power' => 'int'
@@ -28,11 +28,12 @@ class DatabaseController extends Controller
 
         Yii::$app->db->createCommand()->createTable('work',
             [
-                'id' => 'fk',
+                'work_id' => 'fk',
                 'name' => 'string',
                 'age' => 'int',
                 'cost' => 'int'
             ]);
         Yii::$app->db->createCommand('');
+        Yii::$app->db->hasOne();
     }
 }
